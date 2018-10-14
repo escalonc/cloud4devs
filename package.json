@@ -1,0 +1,19 @@
+{
+  "name": "cloud4devs",
+  "description": "A multi cloud client for backup your source code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": false,
+  "repository": "git@github.com:escalonc/cloud4devs.git",
+  "author": "Chistopher Escalon <escalonchristopher@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dropbox": "^4.0.12"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
