@@ -4,7 +4,7 @@
 
 ### The problem
 
-For some developers it's not enough backup their appreciated source in sites like Github, Gitlab or Bitbucket or maybe you want an easy way to sync your work between your computers, and I'm not an organize person 😓, sometimes I forgot to commit my changes, so I tought I'm going to work directly in my personal cloud folder, _in my case Dropbox_.
+For some developers it's not enough backup their appreciated source in sites like Github, Gitlab or Bitbucket or maybe you want an easy way to sync your work between your computers, and I'm not an organize person 😅, sometimes I forgot to commit my changes, so I tought I'm going to work directly in my personal cloud folder, _in my case Dropbox_.
 
 ![Giant Library](https://i.pinimg.com/originals/39/87/2d/39872d5ebb92f7c6973c22c10751d62c.jpg)
 
