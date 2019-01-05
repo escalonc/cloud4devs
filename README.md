@@ -16,7 +16,7 @@ But surprise, there's not a buit in feature that support something similar like 
 
 - Save space
 - Save bandwidth
-- avoid conflicts for the binaries
+- Avoid conflicts for the binaries
 
 ### My porpuse
 
@@ -27,7 +27,7 @@ After a research I found a few scripts and some workarounds. But I said common m
 - Cross platform
 - Multi cloud support
 - Background service
-- Search your .gitignore files
+- Looks into your .gitignore files
 - Parse your .gitignore files
 - Sync your files to your prefered cloud
 
@@ -40,3 +40,4 @@ After a research I found a few scripts and some workarounds. But I said common m
 - Google drive
 - FTP server
 - One drive
+- S3 Bucket
