@@ -1,4 +1,4 @@
-# Cloud 4 devs
+# Cloud for devs
 
 ## A multi cloud client for backup your source code
 
