@@ -1,19 +1,38 @@
 {
   "name": "cloud4devs",
-  "description": "A multi cloud client for backup your source code",
   "version": "1.0.0",
+  "description": "## A multi cloud client for backup your source code",
   "main": "index.js",
-  "private": false,
-  "repository": "git@github.com:escalonc/cloud4devs.git",
-  "author": "Chistopher Escalon <escalonchristopher@gmail.com>",
-  "license": "MIT",
+  "scripts": {
+    "start": "dist/src/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escalonc/cloud4devs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escalonc/cloud4devs/issues"
+  },
+  "homepage": "https://github.com/escalonc/cloud4devs#readme",
   "dependencies": {
-    "axios": "^0.18.0",
-    "dropbox": "^4.0.12"
+    "chokidar": "^2.0.4",
+    "dropbox": "^4.0.15",
+    "fast-glob": "^2.2.6",
+    "node-find": "^0.6.1"
   },
   "devDependencies": {
+    "@types/chokidar": "^1.7.5",
+    "@types/glob": "^7.1.1",
+    "@types/node": "^10.12.18",
+    "dotenv": "^6.2.0",
     "jest": "^23.6.0",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
   }
 }
