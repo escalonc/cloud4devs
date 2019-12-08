@@ -1,7 +1,7 @@
 {
   "name": "cloud4devs",
   "version": "1.0.0",
-  "description": "## A multi cloud client for backup your source code",
+  "description": "A multi cloud client for backup your source code",
   "main": "index.js",
   "scripts": {
     "start": "dist/src/index.js",
@@ -20,19 +20,21 @@
   },
   "homepage": "https://github.com/escalonc/cloud4devs#readme",
   "dependencies": {
-    "chokidar": "^2.0.4",
-    "dropbox": "^4.0.15",
-    "fast-glob": "^2.2.6",
+    "chokidar": "^3.3.0",
+    "dropbox": "^4.0.30",
+    "fast-glob": "^3.1.1",
+    "node-fetch": "^2.6.0",
     "node-find": "^0.6.1"
   },
   "devDependencies": {
-    "@types/chokidar": "^1.7.5",
+    "@types/chokidar": "^2.1.3",
     "@types/glob": "^7.1.1",
-    "@types/node": "^10.12.18",
-    "dotenv": "^6.2.0",
-    "jest": "^23.6.0",
-    "ts-jest": "^23.10.5",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.2.2"
+    "@types/node": "^12.12.14",
+    "@types/node-fetch": "^2.5.4",
+    "dotenv": "^8.2.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
   }
 }
