@@ -5,13 +5,15 @@ export enum EntryType {
 }
 
 export interface FileEntryNode {
-  id: string;
   name: string;
   entryType: EntryType;
+  parent: FileEntryNode;
   children: FileEntryNode[];
 }
 
 export default interface FileSystemTree {
-  Add(path: string, entryType: EntryType): void;
-  Remove(entry: FileEntryNode): void;
+  root: FileEntryNode;
+  count: number;
+  add(path: string, entryType: EntryType): void;
+  remove(entry: FileEntryNode): void;
 }
