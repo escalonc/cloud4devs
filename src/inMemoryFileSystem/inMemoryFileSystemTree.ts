@@ -1,38 +1,48 @@
-import FileSystemTree, { FileEntryNode, EntryType } from './fileSystemtree';
+import FileSystemTree, { Entry, EntryType, Directory } from './fileSystemTree';
+import EntryFactory from './fileEntryFactory';
 
 export default class InMemoryFileSystemTree implements FileSystemTree {
-  private readonly rootEntry: FileEntryNode;
+  private readonly rootEntry: Directory;
   private elementsQuantity: number;
+  // path: string;
 
   constructor(rootEntryName: string) {
-    this.rootEntry = {
-      name: rootEntryName
-    } as FileEntryNode;
+    this.rootEntry = EntryFactory.createDirectory(rootEntryName);
     this.elementsQuantity = 1;
   }
 
   add(path: string, entryType: EntryType): void {
-    const fileEntry: FileEntryNode = {
-      name: path,
-      entryType,
-      parent: this.rootEntry,
-      children: []
-    };
-    this.rootEntry.children.push(fileEntry);
+    let entry: Entry;
+    this.preparePath(path);
+    if (entryType === EntryType.Directory) {
+      entry = EntryFactory.createDirectory(path);
+    } else {
+      entry = EntryFactory.createFile(path);
+    }
+    this.rootEntry.children.push(entry);
     this.elementsQuantity++;
   }
 
-  remove(entry: FileEntryNode): void {
-    throw new Error('Method not implemented.');
-  }
+  // remove(entry: Entry): void {
+  //   throw new Error('Method not implemented.');
+  // }
 
-  findEntry(path: string) {}
+  // findEntry(path: string) {}
 
-  get root(): FileEntryNode {
+  get root(): Directory {
     return this.rootEntry;
   }
 
   get count(): number {
     return this.elementsQuantity;
+  }
+
+  get path() {
+    return '';
+  }
+
+  private preparePath(path: string) {
+    const preparedPath = path.replace(this.root.name, '');
+    return preparedPath.split('/');
   }
 }
