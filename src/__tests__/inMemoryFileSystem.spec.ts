@@ -33,4 +33,6 @@ test('first new entry is child of root', () => {
 
 test('add new entry in given path', () => {
   inMemoryFileSystem.add(`sample3`, EntryType.Directory);
+  console.info('-------');
+  console.log(inMemoryFileSystem.findPath(`sample3`));
 });

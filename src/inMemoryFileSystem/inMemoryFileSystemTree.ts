@@ -37,12 +37,31 @@ export default class InMemoryFileSystemTree implements FileSystemTree {
     return this.elementsQuantity;
   }
 
-  get path() {
-    return '';
+  findPath(element: string): string {
+    const elements: Entry[] = [];
+    this.hasPath(this.rootEntry, elements, element);
+    return elements.join('');
   }
 
   private preparePath(path: string) {
-    const preparedPath = path.replace(this.root.name, '');
+    const preparedPath = path.replace(this.rootEntry.name, '');
     return preparedPath.split('/');
+  }
+
+  private hasPath(rootNode: Entry, nodes: Entry[], element: string): boolean {
+    if (rootNode.name !== element) {
+      return false;
+    }
+
+    nodes.push(rootNode);
+
+    for (const nodeEntry of nodes) {
+      if (this.hasPath(nodeEntry, nodes, element)) {
+        return true;
+      }
+    }
+
+    nodes.pop();
+    return false;
   }
 }

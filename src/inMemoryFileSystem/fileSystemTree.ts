@@ -17,7 +17,7 @@ export interface Directory extends Entry {
 export default interface FileSystemTree {
   root: Directory;
   count: number;
-  path: string;
+  findPath(element: string): string;
   add(path: string, entryType: EntryType): void;
-  // remove(entry: Entry): void;
+  // remove(entry: Entry): void;\
 }
