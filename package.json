@@ -41,7 +41,7 @@
     "chokidar": "^3.3.0",
     "dropbox": "^4.0.30",
     "fast-glob": "^3.1.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "node-find": "^0.6.1"
   },
   "devDependencies": {
